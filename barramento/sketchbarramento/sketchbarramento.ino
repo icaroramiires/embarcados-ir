@@ -36,10 +36,10 @@ void enviarDados(){
 
 int tam = sizeof(dados);
 char buffer[tam];
-memcpy(&buffer,&dados,5);
+memcpy(&buffer,&dados,tam);
 
 Serial.write('I');
-Serial.write((uint8_t*)&buffer, 5);
+Serial.write((uint8_t*)&buffer, tam);
 Serial.write('F');
 
 
