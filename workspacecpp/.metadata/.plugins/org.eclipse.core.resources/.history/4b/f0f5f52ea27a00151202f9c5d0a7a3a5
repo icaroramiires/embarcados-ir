@@ -5,8 +5,9 @@
  *      Author: Igo Romero
  */
 
-#include "Comunicacao.h"
-#include "iostream"
+#include <cstdlib>
+
+#include "../include/Comunicacao.h"
 
 using namespace std;
 
