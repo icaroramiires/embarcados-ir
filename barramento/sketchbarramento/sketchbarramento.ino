@@ -3,7 +3,7 @@
 #include "Adafruit_BMP085.h"
 
 struct Dados{ //Estutura contendo as informaçoes que seram enviadas no buffer
-  bool atividade; // atividade 
+  int atividade; // atividade 
   int altitude;  // altitude
 };
 
@@ -18,6 +18,24 @@ void setup(){
  Serial.begin(9600); // Iniciando a comunicaçao Serial
  acelerometro.powerOn(); // Iniciando acelerometro
  bmp.begin();  // iniciando o Barometro 
+ 
+ acelerometro.setActivityThreshold(75); //62.5mg per increment
+ acelerometro.setInactivityThreshold(75); //62.5mg per increment
+ acelerometro.setTimeInactivity(10); // how many seconds of no activity is inactive?
+
+ //look of activity movement on this axes - 1 == on; 0 == off 
+ acelerometro.setActivityX(1);
+ acelerometro.setActivityY(1);
+ acelerometro.setActivityZ(1);
+
+ //look of inactivity movement on this axes - 1 == on; 0 == off
+ acelerometro.setInactivityX(1);
+ acelerometro.setInactivityY(1);
+ acelerometro.setInactivityZ(1);
+ 
+ 
+ 
+ acelerometro.setInterrupt( ADXL345_INT_ACTIVITY_BIT,  1);
 }
 
 void loop(){
@@ -41,20 +59,18 @@ memcpy(&buffer,&dados,tam);
 Serial.write('I');
 Serial.write((uint8_t*)&buffer, tam);
 Serial.write('F');
-
-
 }
 
-bool verificaTerremoto(byte leitura){
+int verificaTerremoto(byte leitura){
 acelerometro.setInterruptMapping( ADXL345_INT_ACTIVITY_BIT,   ADXL345_INT1_PIN );
  
 bool valor = ((leitura >> ADXL345_INT_ACTIVITY_BIT  ) & 1); 
 
-if(valor == 1 ){  // retorna verdadeiro se tiver atividade 
- return true;
+if(valor == true ){  // retorna verdadeiro se tiver atividade 
+ return 1;
  
-}if(valor == 0){ //retorna falso se nao tiver atividade
- return false;
+}else{
+ return 0;
 }
 
 
