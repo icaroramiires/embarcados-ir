@@ -1,28 +1,40 @@
+
+
 #include <Wire.h>
 #include "ADXL345.h"
 
-ADXL345 acelerometro = ADXL345();
+ int x,y,z; 
 
+ADXL345 adxl;
 void setup(){
 
-  Serial.begin(9600);
-  acelerometro.powerOn();
-  
+ Serial.begin(9600);
+   adxl.powerOn(); 
 }
-
-void verificarTerremoto() {
-bool x;
-
-
-x = acelerometro.getActivityThreshold();
-
-Serial.println(x);
-
-}
-
 
 void loop(){
   
-  verificarTerremoto();
+ adxl.readAccel(&x, &y, &z); 
+ 
+ byte leitura = adxl.getInterruptSource();
+
+ verificaTerremoto(leitura);
+
 
 }
+
+
+void verificaTerremoto(byte leitura){
+
+ if(adxl.triggered(leitura, ADXL345_INACTIVITY)){
+  Serial.println("Sem terremoto");
+ }
+  
+ if(adxl.triggered(leitura, ADXL345_ACTIVITY)){
+  Serial.println("Terremto Detectado"); 
+  
+ }
+}
+  
+  
+  
