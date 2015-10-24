@@ -7,10 +7,9 @@
 
 #include <Extern.h>
 
-#include <Comunicacao.h>
 #include <stddef.h>
 
-#include "../include/Comunicao.h"
+#include <Comunicacao.h>
 
 struct Dados {
 	bool atividade;

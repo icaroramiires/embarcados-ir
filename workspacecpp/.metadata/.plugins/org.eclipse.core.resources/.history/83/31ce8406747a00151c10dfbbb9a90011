@@ -1,0 +1,4 @@
+src/Comunicacao.d: ../src/Comunicacao.cpp \
+ /home/acer/Documentos/Trabalhos2015/Embarcado/embarcados-ir/workspacecpp/comunicacao/include/Comunicao.h
+
+/home/acer/Documentos/Trabalhos2015/Embarcado/embarcados-ir/workspacecpp/comunicacao/include/Comunicao.h:

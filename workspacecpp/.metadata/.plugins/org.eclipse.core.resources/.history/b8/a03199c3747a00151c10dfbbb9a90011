@@ -1,0 +1,23 @@
+/*
+ * Teste.cpp
+ *
+ *  Created on: 24/10/2015
+ *      Author: Igo Romero
+ *
+ *      Classe para testar a biblioteca
+ */
+
+
+#include <Comunicacao.h>
+#include <iostream>
+
+using namespace std;
+
+
+
+
+
+
+
+
+
