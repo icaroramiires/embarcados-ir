@@ -7,14 +7,19 @@ struct Dados{ //Estutura contendo as informaçoes que seram enviadas no buffer
   int altitude;  // altitude
 };
 
+
 Dados dados; //criando um elemento da estutura dados
 
 ADXL345 acelerometro = ADXL345(); // Criando o acelerometro
 
 Adafruit_BMP085 bmp = Adafruit_BMP085(); //Criando o Barometro 
 
+int led = 1;
 
 void setup(){
+  
+  pinMode(led, OUTPUT);
+  
  Serial.begin(9600); // Iniciando a comunicaçao Serial
  acelerometro.powerOn(); // Iniciando acelerometro
  bmp.begin();  // iniciando o Barometro 
