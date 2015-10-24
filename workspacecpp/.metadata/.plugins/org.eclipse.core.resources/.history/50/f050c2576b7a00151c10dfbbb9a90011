@@ -1,0 +1,29 @@
+/*
+ * Comunicao.h
+ *
+ *  Created on: 24/10/2015
+ *      Author: Igo Romero
+ *  Class para comunicação com o dispositivo controlador
+ */
+#include <stdlib.h>
+#ifndef INCLUDE_COMUNICAO_H_
+#define INCLUDE_COMUNICAO_H_
+
+// prerrogativas de compilação include p/ Windows
+
+#ifdef _WIN32 || _WIN64
+#include <windows.h>
+#endif
+
+// prerrogativas de complição  include p/ linux
+
+#ifdef __linux__
+#include <unistd.h>
+#define Sleep(x) usleep(x * 1000); //Sleep do windows e do linux nano -> micro
+#endif
+
+class Comunicacao {
+
+}
+
+#endif /* INCLUDE_COMUNICAO_H_ */

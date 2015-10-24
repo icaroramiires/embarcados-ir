@@ -1,0 +1,16 @@
+/*
+ * Comunicao.h
+ *
+ *  Created on: 24/10/2015
+ *      Author: Igo Romero
+ *  Class para comunicação com o dispositivo controlador
+ */
+
+#ifndef INCLUDE_COMUNICAO_H_
+#define INCLUDE_COMUNICAO_H_
+
+
+
+
+
+#endif /* INCLUDE_COMUNICAO_H_ */
