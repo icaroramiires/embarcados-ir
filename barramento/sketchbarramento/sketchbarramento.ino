@@ -19,16 +19,17 @@ void setup(){
  acelerometro.powerOn(); // Iniciando acelerometro
  bmp.begin();  // iniciando o Barometro 
  
- acelerometro.setActivityThreshold(75); //62.5mg per increment
- acelerometro.setInactivityThreshold(75); //62.5mg per increment
- acelerometro.setTimeInactivity(10); // how many seconds of no activity is inactive?
+ //configurando parametros do acelerometro
+ acelerometro.setActivityThreshold(75); 
+ acelerometro.setInactivityThreshold(75); 
+ acelerometro.setTimeInactivity(10);
 
- //look of activity movement on this axes - 1 == on; 0 == off 
+  
  acelerometro.setActivityX(1);
  acelerometro.setActivityY(1);
  acelerometro.setActivityZ(1);
 
- //look of inactivity movement on this axes - 1 == on; 0 == off
+ 
  acelerometro.setInactivityX(1);
  acelerometro.setInactivityY(1);
  acelerometro.setInactivityZ(1);

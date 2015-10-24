@@ -1,0 +1,56 @@
+/*
+ * Comunicacao.h
+ *
+ *  Created on: 24/10/2015
+ *      Author: acer
+ */
+#ifndef COMUNICACAO_H_
+#define COMUNICACAO_H_
+//Se for Windows inseri a biblioteca
+
+#ifdef _WIN32 || _WIN64
+#include <windows.h>
+#endif
+
+#ifdef __linux__
+#include <unistd.h>
+#define Sleep(x) usleep(x * 1000); //Sleep do Windows e linux  --- conversão de nano para micro
+#endif
+
+class Comunicacao {
+private:
+	char* porta;
+
+// diretivas de compilação para ver que SO esta usando
+// Se meu SO for linux isso entra no binario
+#ifdef __linux__
+	int hPorta;
+#endif
+
+//Se meu SO for windows isso entra no binario
+
+
+#ifdef _WIN32 || _WIN64
+	HANDLE hPorta;
+#endif
+
+
+//metodos da classe
+public:
+	Comunicacao(char* porta);
+
+	//iniciar a comunicação com a porta Serial -- retorna 0 se der tudo certo, retorna #! se ocorrer problema
+	int iniciar();
+
+	//realizar a leitura de um buffer a partir de uma porta Serial
+	int ler(char* buffer, long unsigned int bytesParaLer);
+
+	//finaliza o uso da porta Serial
+	int finalizar();
+
+};
+
+
+
+
+#endif /* COMUNICACAO_H_ */
