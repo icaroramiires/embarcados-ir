@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.sun.jna.Library"/>
+<fullyQualifiedTypeName name="com.sun.jna.Native"/>
+<fullyQualifiedTypeName name="com.sun.jna.Platform"/>
+<fullyQualifiedTypeName name="java.lang.InterruptedException"/>
+<fullyQualifiedTypeName name="br.edu.ifba.embarcados.javamonitor.conector.IConexao"/>
+<fullyQualifiedTypeName name="br.edu.ifba.embarcados.javamonitor.conector.Conector"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+</qualifiedTypeNameHistroy>
