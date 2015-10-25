@@ -1,0 +1,11 @@
+package br.edu.ifba.embarcados.javamonitor.conector;
+
+import com.sun.jna.Native;
+public class Conector {
+	
+	public static IConexao conector = null;
+	
+	if(Platform.isWindows()){
+		
+	}
+}
