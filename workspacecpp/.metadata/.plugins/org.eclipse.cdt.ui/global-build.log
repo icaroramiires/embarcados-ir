@@ -5,3 +5,9 @@ Invoking: GCC C++ Linker
 g++ -shared -o "comunicacao.so"  ./src/Comunicacao.o ./src/Extern.o   
 Finished building target: comunicacao.so
  
+20:48:11 **** Incremental Build of configuration Debug for project comunicacao ****
+make all 
+make: Nothing to be done for 'all'.
+11:23:00 **** Build of configuration Debug for project comunicacao ****
+make all 
+make: Nothing to be done for 'all'.

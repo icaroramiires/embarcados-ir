@@ -1,10 +1,6 @@
-20:00:44 **** Incremental Build of configuration Release for project comunicacao ****
+11:23:00 **** Build of configuration Debug for project comunicacao ****
 make all 
-Building target: comunicacao.so
-Invoking: GCC C++ Linker
-g++ -shared -o "comunicacao.so"  ./src/Comunicacao.o ./src/Extern.o   
-Finished building target: comunicacao.so
- 
+make: Nothing to be done for 'all'.
 
-20:00:44 Build Finished (took 137ms)
+11:23:01 Build Finished (took 128ms)
 

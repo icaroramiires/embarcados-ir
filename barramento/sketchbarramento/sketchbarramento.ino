@@ -14,7 +14,7 @@ ADXL345 acelerometro = ADXL345(); // Criando o acelerometro
 
 Adafruit_BMP085 bmp = Adafruit_BMP085(); //Criando o Barometro 
 
-int led = 1;
+int led = 5;
 
 void setup(){
   
@@ -73,9 +73,11 @@ acelerometro.setInterruptMapping( ADXL345_INT_ACTIVITY_BIT,   ADXL345_INT1_PIN )
 bool valor = ((leitura >> ADXL345_INT_ACTIVITY_BIT  ) & 1); 
 
 if(valor == true ){  // retorna verdadeiro se tiver atividade 
+ digitalWrite(led, HIGH);
  return 1;
  
 }else{
+ digitalWrite(led, LOW);
  return 0;
 }
 

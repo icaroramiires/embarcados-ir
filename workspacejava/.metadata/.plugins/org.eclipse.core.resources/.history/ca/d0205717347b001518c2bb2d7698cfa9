@@ -1,0 +1,7 @@
+package br.edu.ifba.bsi.embarcados.javamonitor.alerta;
+
+public class Audio {
+	
+	private File audio;
+
+}
