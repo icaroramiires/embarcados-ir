@@ -4,7 +4,7 @@ import com.sun.jna.Native;
 import com.sun.jna.Platform;
 
 public class Conector {
-	public static IConexao getConector() {
+	public static IConexao getConector(){
 		IConexao conector = null;
 
 		if (Platform.isWindows()) {
