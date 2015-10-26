@@ -1,6 +1,7 @@
 package br.edu.ifba.embarcados.javamonitor;
 
 import java.io.File;
+import java.io.ObjectInputStream.GetField;
 
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
@@ -15,10 +16,10 @@ public class Executor {
 	
 	
 	public static void main(String[] args) throws InterruptedException {
-		String path = "/home/acer/Documentos/Trabalhos2015/Embarcado/embarcados-ir/workspacejava/DeteccaoTerremoto/src/br/edu/ifba/bsi/embarcados/javamonitor/alerta/som.mp3";
+		String path = System.getProperty("user.dir")+"/src/br/edu/ifba/bsi/embarcados/javamonitor/alerta/som.mp3";
 		File mp3File = new File(path);
 		Audio alerta  = new Audio(mp3File);
-		
+		System.out.println(path);
 		BasicConfigurator.configure();
 		
 		IConexao conector = Conector.getConector();
@@ -39,6 +40,8 @@ public class Executor {
 				Thread.sleep(100);
 			}
 		}
+		else
+			log.warn("nao foi possivel comunicar via serial");
 	}
 
 }
