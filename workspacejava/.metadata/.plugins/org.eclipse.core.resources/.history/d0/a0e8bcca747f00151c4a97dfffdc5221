@@ -11,6 +11,6 @@ public class Log  implements IListenerMonitor{
 	
 	@Override
 	public void notificarAtividade() {
-		log.warn("Atenção Atividade Sismica Detectada");
+		log.warn("Terremoto :@");
 	}
 }
