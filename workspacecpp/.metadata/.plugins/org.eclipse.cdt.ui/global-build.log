@@ -1,13 +1,64 @@
-20:00:44 **** Incremental Build of configuration Release for project comunicacao ****
+21:17:06 **** Incremental Build of configuration Debug for project deslocamento ****
 make all 
-Building target: comunicacao.so
-Invoking: GCC C++ Linker
-g++ -shared -o "comunicacao.so"  ./src/Comunicacao.o ./src/Extern.o   
-Finished building target: comunicacao.so
+Building file: ../src/Executor.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Executor.d" -MT"src/Executor.d" -o "src/Executor.o" "../src/Executor.cpp"
+Finished building: ../src/Executor.cpp
  
-20:48:11 **** Incremental Build of configuration Debug for project comunicacao ****
+Building target: deslocamento
+Invoking: GCC C++ Linker
+g++  -o "deslocamento"  ./src/Executor.o   
+Finished building target: deslocamento
+ 
+21:17:12 **** Incremental Build of configuration Debug for project deslocamento ****
 make all 
 make: Nothing to be done for 'all'.
-11:23:00 **** Build of configuration Debug for project comunicacao ****
+21:17:56 **** Incremental Build of configuration Debug for project deslocamento ****
 make all 
-make: Nothing to be done for 'all'.
+Building file: ../src/Executor.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Executor.d" -MT"src/Executor.d" -o "src/Executor.o" "../src/Executor.cpp"
+Finished building: ../src/Executor.cpp
+ 
+Building target: deslocamento
+Invoking: GCC C++ Linker
+g++  -o "deslocamento"  ./src/Executor.o   
+Finished building target: deslocamento
+ 
+21:25:38 **** Incremental Build of configuration Debug for project deslocamento ****
+make all 
+Building file: ../src/Executor.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Executor.d" -MT"src/Executor.d" -o "src/Executor.o" "../src/Executor.cpp"
+../src/Executor.cpp: In function ‘int main(int, char**)’:
+../src/Executor.cpp:30:6: warning: unused variable ‘temperaturaRec’ [-Wunused-variable]
+  int temperaturaRec = (info & 4278190080) >> 24;
+      ^
+../src/Executor.cpp:31:6: warning: unused variable ‘pressaoSistolicaRec’ [-Wunused-variable]
+  int pressaoSistolicaRec = (info & 16711680) >> 16;
+      ^
+../src/Executor.cpp:32:6: warning: unused variable ‘pressaoDiastolicaRec’ [-Wunused-variable]
+  int pressaoDiastolicaRec = (info & 65280) >> 8;
+      ^
+../src/Executor.cpp:33:6: warning: unused variable ‘batimentosRec’ [-Wunused-variable]
+  int batimentosRec = (info & 255);
+      ^
+Finished building: ../src/Executor.cpp
+ 
+Building target: deslocamento
+Invoking: GCC C++ Linker
+g++  -o "deslocamento"  ./src/Executor.o   
+Finished building target: deslocamento
+ 
+21:26:35 **** Incremental Build of configuration Debug for project deslocamento ****
+make all 
+Building file: ../src/Executor.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Executor.d" -MT"src/Executor.d" -o "src/Executor.o" "../src/Executor.cpp"
+Finished building: ../src/Executor.cpp
+ 
+Building target: deslocamento
+Invoking: GCC C++ Linker
+g++  -o "deslocamento"  ./src/Executor.o   
+Finished building target: deslocamento
+ 

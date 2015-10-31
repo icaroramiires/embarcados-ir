@@ -1,0 +1,15 @@
+package br.edu.ifba.embarcados.javamonitor.log;
+
+import java.util.logging.Logger;
+
+import br.edu.ifba.embarcados.javamonitor.asincexec.IListenerMonitor;
+
+
+public class Log implements IListenerMonitor {
+	Logger log =  Logger.getLogger(Log.class);
+	@Override
+	public void notificarAtividade() {
+		
+	}
+
+}

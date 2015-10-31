@@ -1,0 +1,15 @@
+21:26:35 **** Incremental Build of configuration Debug for project deslocamento ****
+make all 
+Building file: ../src/Executor.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Executor.d" -MT"src/Executor.d" -o "src/Executor.o" "../src/Executor.cpp"
+Finished building: ../src/Executor.cpp
+ 
+Building target: deslocamento
+Invoking: GCC C++ Linker
+g++  -o "deslocamento"  ./src/Executor.o   
+Finished building target: deslocamento
+ 
+
+21:26:36 Build Finished (took 568ms)
+

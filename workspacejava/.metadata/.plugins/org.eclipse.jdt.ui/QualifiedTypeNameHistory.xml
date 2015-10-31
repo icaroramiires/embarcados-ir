@@ -6,5 +6,16 @@
 <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
 <fullyQualifiedTypeName name="br.edu.ifba.embarcados.javamonitor.conector.IConexao"/>
 <fullyQualifiedTypeName name="br.edu.ifba.embarcados.javamonitor.conector.Conector"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="br.edu.ifba.embarcados.javamonitor.asincexec.IListenerMonitor"/>
+<fullyQualifiedTypeName name="br.edu.ifba.embarcados.javamonitor.Listener"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="java.util.logging.Logger"/>
+<fullyQualifiedTypeName name="br.edu.ifba.embarcados.javamonitor.Executor"/>
+<fullyQualifiedTypeName name="br.edu.ifba.embarcados.javamonitor.asincexec.AsincExec"/>
+<fullyQualifiedTypeName name="org.apache.log4j.BasicConfigurator"/>
+<fullyQualifiedTypeName name="org.apache.log4j.config.PropertyGetter.PropertyCallback"/>
+<fullyQualifiedTypeName name="org.apache.log4j.PropertyConfigurator"/>
 </qualifiedTypeNameHistroy>

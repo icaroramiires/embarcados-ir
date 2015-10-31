@@ -1,0 +1,24 @@
+/*
+ * Executor.cpp
+ *
+ *  Created on: 29/10/2015
+ *      Author: webmaster
+ */
+
+#include <stdlib.h>
+#include <iostream>
+
+using namespace std;
+
+
+int main(int argc, char** argv) {
+	int temperatura = 36;
+	int pressaoSistolica = 8;
+	int pressaoDiastolica = 12;
+	int batimentos = 100;
+
+	int info = 0;
+	cout << "tam " << sizeof(info);
+
+	info = info | (temperatura << 24);
+}

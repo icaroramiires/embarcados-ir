@@ -1,0 +1,7 @@
+package br.edu.ifba.embarcados.javamonitor;
+
+import br.edu.ifba.embarcados.javamonitor.asincexec.IListenerMonitor;
+
+public class Listener implements IListenerMonitor{
+
+}

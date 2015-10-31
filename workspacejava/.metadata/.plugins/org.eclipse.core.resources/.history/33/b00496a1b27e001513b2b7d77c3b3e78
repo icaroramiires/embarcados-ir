@@ -1,0 +1,19 @@
+package br.edu.ifba.embarcados.javamonitor.listeners;
+
+import java.util.logging.Logger;
+
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.PropertyConfigurator;
+
+import br.edu.ifba.embarcados.javamonitor.asincexec.IListenerMonitor;
+
+
+public class Log  implements IListenerMonitor {
+	@Override
+	public void notificarAtividade() {
+		static Logger log =  Logger.getLogger("Executor");
+		BasicConfigurator.configure();
+		PropertyConfigurator.configure("conf/log4j.properties");
+		log.warning("Terremoto!");
+	}
+}

@@ -1,0 +1,18 @@
+package br.edu.ifba.embarcados.javamonitor.log;
+
+import java.util.logging.Logger;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.PropertyConfigurator;
+
+import br.edu.ifba.embarcados.javamonitor.Executor;
+import br.edu.ifba.embarcados.javamonitor.asincexec.IListenerMonitor;
+
+
+public class Log  {
+	static Logger log =  Logger.getLogger(Log.class);
+	@Override
+	public void notificarAtividade() {
+		
+	}
+
+}

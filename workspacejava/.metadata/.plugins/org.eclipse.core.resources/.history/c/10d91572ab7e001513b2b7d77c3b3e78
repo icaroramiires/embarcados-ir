@@ -1,0 +1,14 @@
+package br.edu.ifba.embarcados.javamonitor.listeners;
+
+import br.edu.ifba.embarcados.javamonitor.asincexec.IListenerMonitor;
+
+public class Alerta implements IListenerMonitor{
+	String path = System.getProperty("user.dir") + "/src/br/edu/ifba/bsi/embarcados/javamonitor/alerta/som.mp3";
+	
+	@Override
+	public void notificarAtividade() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
