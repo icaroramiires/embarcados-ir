@@ -1,8 +1,0 @@
-package br.edu.ifba.embarcados.javamonitor.log;
-
-import br.edu.ifba.embarcados.javamonitor.asincexec.IListenerMonitor;
-
-
-public class Log implements IListenerMonitor {
-
-}

@@ -1,22 +1,57 @@
 # -*- coding: utf-8 -*-
 
+from threading import Thread
 from ctypes import cdll
 from Tkinter import *
-from datetime import datetime
-import time 
+import time
+import os
 
-sensor = cdll.LoadLibrary("/home/webmaster/workspace/embarcados-ir/workspacecpp/comunicacao/Release/comunicacao.so")
+class AsyncExec(Thread):
 
-resultado = sensor.iniciar("/dev/ttyUSB0")
+    def __init__(self, porta):
+        Thread.__init__(self)
+        self.porta = porta
+        self.listeners = list()
+        self.continuar = True
 
-if resultado == 0:
-    while True:
-        sensor.ler()
-        if sensor.getAtividade() == 1:
-            print"[WARN]", datetime.now(), "ATIVIDADE SISMICA DETECTADA"
+    def add_listener(self, listener):
+        self.listeners.append(listener)
+
+    def set_continuar(self, continuar):
+        self.continuar = continuar
+
+    def get_notification(self):
+        for listener in self.listeners:
+            listener.notificar_atividade()
+
+    def run(self):
+        conector = cdll.LoadLibrary("/home/webmaster/Documentos/monitor-python/comunicacao.so")
+        if conector.iniciar(self.porta) == 0:
+            self.continuar = True
+            print "pegar dados"
+            while self.continuar:
+                conector.ler()
+                if(conector.getAtividade() == 1):
+                    self.get_notification()
+                time.sleep(0.10)
+            conector.finalizar()
         else:
-            print"[INFO]",datetime.now(), "ATIVIDADE: ", sensor.getAtividade(), "ALTITUDE: ", sensor.getAltura()
-        time.sleep(0.10)
-        
-else:
-    print("ERROR - Não foi possivel comunicar com a porta serial") 
+            print("nao foi possivel comunicar com o arduino")
+
+class Notification:
+    def __init__(self, master):
+        pass
+    def notificar_atividade(self):
+        print "Terremoto"
+
+if __name__ == '__main__':
+    async = AsyncExec("/dev/ttyUSB0")
+    root = Tk()
+    notificacao = Notification(root)
+    async.add_listener(notificacao)
+    async.start()
+    i = 0
+    while(i < 10):
+        time.sleep(1)
+        i += 1
+    async.set_continuar(False)
