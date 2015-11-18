@@ -7,10 +7,10 @@ import br.edu.ifba.embarcados.javamonitor.asincexec.IListenerMonitor;
 
 
 public class Log  implements IListenerMonitor{
-	//final Logger log = Logger.getLogger(Log.class);
+	final Logger log = Logger.getLogger(Log.class);
 	
 	@Override
-	public void notificarAtividade() {
-		//log.warn("Atenção Atividade Sismica Detectada");
+	public void notificarAtividade(int valor) {
+		log.info("Atenção Atividade Sismica Detectada "+valor+" metros");
 	}
 }

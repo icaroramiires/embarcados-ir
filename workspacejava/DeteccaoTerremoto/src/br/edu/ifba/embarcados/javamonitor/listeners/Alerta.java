@@ -10,7 +10,7 @@ public class Alerta implements IListenerMonitor{
 	File mp3File = new File(path);
 	Audio alerta  = new Audio(mp3File);
 	@Override
-	public void notificarAtividade() {
+	public void notificarAtividade(int valor) {
 		alerta.play();
 	}
 }

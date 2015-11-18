@@ -14,7 +14,7 @@ public class AsincExec implements Runnable {
 	private String porta;
 	private boolean continuar;
 	private List<IListenerMonitor> listeners;
-	final Logger log = Logger.getLogger(AsincExec.class);
+	//final Logger log = Logger.getLogger(AsincExec.class);
 
 	public AsincExec(String porta) {
 		this.porta = porta;
@@ -44,8 +44,8 @@ public class AsincExec implements Runnable {
 				conector.ler();
 				
 				if (conector.getAtividade() == 1) {
-					log.warn("Altura " + conector.getAltura() + " Metros");
-					notificar();
+					//log.warn("Altura " + conector.getAltura() + " Metros");
+					notificar(conector.getAltura());
 				}
 				try {
 					Thread.sleep(100);
@@ -61,9 +61,9 @@ public class AsincExec implements Runnable {
 
 	}
 
-	private void notificar() {
+	private void notificar(int valor) {
 		for (IListenerMonitor listener : listeners) {
-			listener.notificarAtividade();
+			listener.notificarAtividade(valor);
 		}
 	}
 }
