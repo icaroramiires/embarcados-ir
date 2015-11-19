@@ -9,7 +9,7 @@
 #define COMUNICACAO_H_
 //Se for Windows inseri a biblioteca
 
-#ifdef _WIN32 || _WIN64
+#if _WIN32 || _WIN64
 #include <windows.h>
 #endif
 
@@ -31,7 +31,7 @@ private:
 //Se meu SO for windows isso entra no binario
 
 
-#ifdef _WIN32 || _WIN64
+#if _WIN32 || _WIN64
 	HANDLE hPorta;
 #endif
 

@@ -22,7 +22,7 @@ Comunicacao::Comunicacao(char* porta){
 int Comunicacao::iniciar(){
 	int resultado = EXIT_SUCCESS;
 
-#ifdef _WIN32 || _WIN64
+#if _WIN32 || _WIN64
 	hPorta = CreateFile(porta, GENERIC_READ | GENERIC_WRITE, // cria um arquivo para acessar
 			0, NULL, OPEN_EXISTING, 0, NULL);
 	//caso nao der certo pega o erro do SO
@@ -37,10 +37,10 @@ int Comunicacao::iniciar(){
 		dcb.BaudRate = CBR_9600; //definindo a velocidade de leitura da serial
 		dcb.Parity = NOPARITY; // vao verifica o bit de paridade
 		dcb.StopBits = ONESTOPBIT;
-		dcb.BySize = 8;
+		dcb.ByteSize = 8;
 		// se eu nao conseguir configurar a porta
 		if (!SetCommState(hPorta, &dcb)){
-			resultado  = GetLastErro();
+			resultado  = GetLastError();
 		}
 	}
 #endif
@@ -67,7 +67,7 @@ int Comunicacao::ler(char* buffer,                //quantidade de bits que vc qu
 	int resultado  = EXIT_FAILURE;
 
 	long unsigned int bytesLidos=0; // bytes que ele conseguiu ler
-#ifdef _WIN32 | _WIN64
+#if _WIN32 | _WIN64
 	ReadFile(hPorta, buffer, bytesParaLer, &bytesLidos, NULL); //funcao para ler do windows
 #endif
 
@@ -86,7 +86,7 @@ int Comunicacao::ler(char* buffer,                //quantidade de bits que vc qu
 //metodo para fechar a porta
 int Comunicacao::finalizar(){
 //fechar porta no Windows
-#ifdef _WIN32 || _WIN64
+#if _WIN32 || _WIN64
 	CloseHandle(hPorta);
 #endif
 
