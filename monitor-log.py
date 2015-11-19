@@ -20,7 +20,7 @@ class AsyncExec(Thread):
     def set_continuar(self, continuar):
         self.continuar = continuar
 
-    def get_notification(self):
+    def notify(self):
         for listener in self.listeners:
             listener.notificar_atividade()
 
@@ -32,7 +32,7 @@ class AsyncExec(Thread):
             while self.continuar:
                 conector.ler()
                 if(conector.getAtividade() == 1):
-                    self.get_notification()
+                    self.notify()
                 time.sleep(0.10)
             conector.finalizar()
         else:
