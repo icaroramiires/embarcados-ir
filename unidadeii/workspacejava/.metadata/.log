@@ -1,0 +1,13 @@
+!SESSION 2015-12-12 12:32:46.698 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui.browser 2 0 2015-12-12 12:33:19.024
+!MESSAGE Internal browser is not available: No more handles [Browser style SWT.MOZILLA and Java system property org.eclipse.swt.browser.DefaultType=mozilla are not supported with GTK 3 as XULRunner is not ported for GTK 3 yet]
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2015-12-12 12:34:10.578
+!MESSAGE cacheFile=file:/home/lenovo/file:/home/lenovo/.config/eclipse/org.eclipse.wst.server.discovery/serverAdapterSitesDetails.xml
