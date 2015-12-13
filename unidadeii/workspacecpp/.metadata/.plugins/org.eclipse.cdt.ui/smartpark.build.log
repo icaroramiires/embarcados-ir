@@ -1,0 +1,29 @@
+16:44:23 **** Incremental Build of configuration Release for project smartpark ****
+make all 
+Building file: ../src/Comunicacao.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/lenovo/projeto/embarcados-ir/unidadeii/workspacecpp/smartpark/include" -O3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"src/Comunicacao.d" -MT"src/Comunicacao.d" -o "src/Comunicacao.o" "../src/Comunicacao.cpp"
+Finished building: ../src/Comunicacao.cpp
+ 
+Building file: ../src/Extern.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/lenovo/projeto/embarcados-ir/unidadeii/workspacecpp/smartpark/include" -O3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"src/Extern.d" -MT"src/Extern.d" -o "src/Extern.o" "../src/Extern.cpp"
+Finished building: ../src/Extern.cpp
+ 
+Building file: ../src/Teste.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/lenovo/projeto/embarcados-ir/unidadeii/workspacecpp/smartpark/include" -O3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"src/Teste.d" -MT"src/Teste.d" -o "src/Teste.o" "../src/Teste.cpp"
+../src/Teste.cpp: In function ‘int main(int, char**)’:
+../src/Teste.cpp:21:32: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  Comunicacao com("/dev/ttyACM0");
+                                ^
+Finished building: ../src/Teste.cpp
+ 
+Building target: smartpark.so
+Invoking: GCC C++ Linker
+g++ -shared -o "smartpark.so"  ./src/Comunicacao.o ./src/Extern.o ./src/Teste.o   
+Finished building target: smartpark.so
+ 
+
+16:44:24 Build Finished (took 616ms)
+

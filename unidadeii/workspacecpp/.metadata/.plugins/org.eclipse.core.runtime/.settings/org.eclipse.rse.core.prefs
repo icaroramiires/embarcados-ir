@@ -1,3 +1,4 @@
 activeuserprofiles=G40-80;Team
 eclipse.preferences.version=1
 org.eclipse.rse.systemtype.local.systemType.defaultUserId=lenovo
+useridperkey=G40-80.Local\=lenovo;

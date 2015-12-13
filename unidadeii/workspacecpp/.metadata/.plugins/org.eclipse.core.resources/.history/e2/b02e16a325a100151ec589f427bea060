@@ -1,0 +1,15 @@
+/*
+ * Comunicacao.h
+ *
+ *  Created on: 12 de dez de 2015
+ *      Author: lenovo
+ */
+#include <stdlib.h>
+#ifndef COMUNICACAO_H_
+#define COMUNICACAO_H_
+
+
+
+
+
+#endif /* COMUNICACAO_H_ */
