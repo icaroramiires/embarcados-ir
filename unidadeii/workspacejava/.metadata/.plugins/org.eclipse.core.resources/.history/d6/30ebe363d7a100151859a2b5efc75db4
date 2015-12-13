@@ -1,0 +1,31 @@
+package br.edu.ifba.bsi.se.smartpark;
+
+
+
+public class Informacao {
+	
+	private int batimentos;
+	private int movimentos;
+	private int temperatura;
+	
+	
+	public int getBatimentos() {
+		return batimentos;
+	}
+	public int getMovimentos() {
+		return movimentos;
+	}
+	public int getTemperatura() {
+		return temperatura;
+	}
+	public void setBatimentos(int batimentos) {
+		this.batimentos = batimentos;
+	}
+	public void setMovimentos(int movimentos) {
+		this.movimentos = movimentos;
+	}
+	public void setTemperatura(int temperatura) {
+		this.temperatura = temperatura;
+	}
+
+}

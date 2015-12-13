@@ -1,0 +1,16 @@
+package br.edu.ifba.bsi.se.smartpark;
+
+import br.edu.ifba.bsi.se.smartpark.conector.SingleConector;
+
+public class MonitorEstacionamento {
+
+	public static void main(String[] args) {
+		Informacao info = SingleConector.getInformacao();
+		
+		
+		
+		
+		
+	}
+
+}
