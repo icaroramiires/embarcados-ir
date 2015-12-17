@@ -107,7 +107,7 @@ public class MonitorEstacionamento {
 		return idade;
 	}
 	public String getPne() {
-		String pne = "icnaocad.png";
+		String pne = "icadeirante.png";
 		if(user.getPne()!=null){
 			pne = user.getPne();
 		}

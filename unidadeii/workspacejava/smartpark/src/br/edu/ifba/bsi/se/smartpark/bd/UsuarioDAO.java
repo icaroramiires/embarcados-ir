@@ -1,7 +1,5 @@
 package br.edu.ifba.bsi.se.smartpark.bd;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -23,12 +21,13 @@ public class UsuarioDAO {
 		
 		Usuario u2 = new Usuario();
 		u2.setId(49);
-		u2.setNome("Icaro");
-		u2.setCarro("Honda Civic");
+		u2.setNome("Jackie");
+		u2.setCarro("Saveiro Preto");
 		u2.setPlaca("123");
 		u2.setIdade("60");
 		u2.setPne("icadeirante.png");
 		u2.setFoto("idoso.png");
+		u2.setFoto("jackie.png");
 		
 		
 		usuarios.put(u1.getId(), u1);
