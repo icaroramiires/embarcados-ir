@@ -1,0 +1,53 @@
+package br.edu.ifba.bsi.se.smartpark;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Informacao {
+	
+	private int id;
+	private int RFID;
+	private int statusVaga;
+	private int distancia;
+	
+	
+	public Informacao(int id, int rFID, int statusVaga, int distancia) {
+		this.id = id;
+		this.RFID = rFID;
+		this.statusVaga = statusVaga;
+		this.distancia = distancia;
+	}
+
+	public List<Informacao> criarVaga(int size) {
+		List<Informacao> lista = new ArrayList<Informacao>();
+		for (int i = 0; i < size; i++) {
+			lista.add(new Informacao(getId(), getRFID(), getStatusVaga(), getDistancia()));
+		}
+	}
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getRFID() {
+		return RFID;
+	}
+	public void setRFID(int rFID) {
+		RFID = rFID;
+	}
+	public int getStatusVaga() {
+		return statusVaga;
+	}
+	public void setStatusVaga(int statusVaga) {
+		this.statusVaga = statusVaga;
+	}
+	public int getDistancia() {
+		return distancia;
+	}
+	public void setDistancia(int distancia) {
+		this.distancia = distancia;
+	}
+	
+}

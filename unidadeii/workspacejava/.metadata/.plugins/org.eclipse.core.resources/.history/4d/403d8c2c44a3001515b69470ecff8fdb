@@ -1,0 +1,38 @@
+package br.edu.ifba.bsi.se.smartpark;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.ManagedBean;
+
+@ManagedBean(name="carro")
+@ApplicationScoped
+public class Carro {
+	private final static String[] cor;
+	private final static String[] avatar; 
+	
+	static {
+		cor = new String[2];
+		cor[0] = "Red";
+		cor[1] = "Green";
+		
+		avatar = new String[2];
+		avatar[0] = "Avatar1";
+		avatar[2] = "avatar2";
+	}
+	
+	public List<Informacao> criarCarro(int size) {
+		Informacao carro = new Informacao();
+		List<Informacao> lista = new ArrayList<Informacao>();
+		
+		carro.getStatusVaga();
+		carro.getRFID();
+		carro.getStatusVaga();
+		carro.getDistancia();
+		for (int i = 0; i < size; i++) {
+			lista.add(carro);
+		}
+		return lista;
+	}
+}

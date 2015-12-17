@@ -1,0 +1,39 @@
+package br.edu.ifba.bsi.se.smartpark;
+
+
+
+public class Informacao {
+	
+	private int id;
+	private int RFID;
+	private int statusVaga;
+	private int distancia;
+	
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getRFID() {
+		return RFID;
+	}
+	public void setRFID(int rFID) {
+		RFID = rFID;
+	}
+	public int getStatusVaga() {
+		return statusVaga;
+	}
+	public void setStatusVaga(int statusVaga) {
+		this.statusVaga = statusVaga;
+	}
+	public int getDistancia() {
+		return distancia;
+	}
+	public void setDistancia(int distancia) {
+		this.distancia = distancia;
+	}
+	
+}

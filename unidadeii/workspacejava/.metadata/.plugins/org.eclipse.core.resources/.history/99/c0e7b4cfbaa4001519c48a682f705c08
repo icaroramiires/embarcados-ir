@@ -1,0 +1,116 @@
+package br.edu.ifba.bsi.se.smartpark;
+
+import javax.faces.bean.ManagedBean;
+
+import br.edu.ifba.bsi.se.smartpark.bd.Usuario;
+import br.edu.ifba.bsi.se.smartpark.bd.UsuarioDAO;
+import br.edu.ifba.bsi.se.smartpark.conector.SingleConector;
+
+@ManagedBean(name = "monitor")
+public class MonitorEstacionamento {
+	int id = 0;
+	int rfid = 0 ;
+	int statusVaga = 0;
+	int distancia = 0;
+	
+	Usuario user = new Usuario();
+
+	public void lerSensores() {
+
+		Informacao info = SingleConector.getInformacao();
+		
+		if(info.getStatusVaga() == 0){
+			System.out.println("Encoste o carro");
+		}else{
+		
+		id = info.getId();
+		rfid = info.getRFID();
+		statusVaga =info.getStatusVaga();
+		distancia = info.getDistancia();
+		
+		user = verificaUsuario(rfid);
+		
+		if( user != null){
+		System.out.println(user.getId());
+		System.out.println(user.getNome());
+		System.out.println(user.getCarro());
+		System.out.println(user.getIdade());
+		System.out.println(user.getPlaca());
+		System.out.println(user.getPne());
+		}else{
+			
+		System.out.println("usuario nao existe");
+		
+		
+		}}
+		
+	}
+	
+	public Usuario verificaUsuario(int id){	
+
+		return UsuarioDAO.getUsuario(id);
+		
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public int getRfid() {
+		return rfid;
+	}
+
+	public String getStatusVaga() {
+		String vaga = "";
+		if(statusVaga == 0) {
+			vaga = "Disponivel";
+		}
+		else{
+			vaga = "Ocupado";
+		}
+		return vaga;
+	}
+
+	public int getDistancia() {
+		return distancia;
+	}
+	
+	public String getPlaca(){
+		String placa = "desconhecido";
+		if(user.getPlaca()!=null){
+			placa = "teste";}
+		return placa;
+	}
+	
+	
+	public String getNome() {
+		String nome = "desconhecido";
+		if(user.getNome()!=null){
+			nome = user.getNome();
+		}
+		return nome;
+	}
+	
+	public String getCarro() {
+		String carro = "desconhecido";
+		if(user.getCarro()!=null){
+			carro = user.getCarro();
+		}
+		return carro;
+	}
+	
+	public String getIdade() {
+		String idade = "desconhecido";
+		if(user.getIdade()!=null){
+			idade = user.getIdade();
+		}
+		return idade;
+	}
+	public String getPne() {
+		String pne = "desconhecido";
+		if(user.getPne()!=null){
+			pne = user.getPne();
+		}
+		return pne;
+	}
+}

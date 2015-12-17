@@ -1,0 +1,5 @@
+package br.edu.ifba.bsi.se.smartpark.bd;
+
+public class Usuario {
+
+}

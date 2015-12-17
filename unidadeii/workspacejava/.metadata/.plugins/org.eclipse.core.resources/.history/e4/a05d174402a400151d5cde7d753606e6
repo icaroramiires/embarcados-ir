@@ -1,0 +1,39 @@
+package br.edu.ifba.bsi.se.smartpark.bd;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class UsuarioDAO {
+
+	private static Map<Integer, Usuario> usuarios = 
+			new TreeMap<Integer, Usuario>();
+	
+	static{
+		
+		Usuario u1 = new Usuario();
+		u1.setId(246);
+		u1.setNome("Igo");
+		u1.setCarro("Maverik");
+		u1.setPlaca("12345");
+		u1.setIdade("60");
+		u1.setPne("sim");
+		
+		
+		usuarios.put(u1.getId(), u1);
+		
+	}
+	
+	public static Usuario getUsuario(int id){
+		return usuarios.get(id);
+	}
+	
+	public static List<Usuario> getUsuarios(){
+		List<Usuario> lusuario = new ArrayList<Usuario>();
+		lusuario = (List<Usuario>) usuarios;
+		return lusuario;
+	}
+	
+
+}

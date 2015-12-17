@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.annotation.ManagedBean"/>
+<fullyQualifiedTypeName name="br.edu.ifba.bsi.se.smartpark.Carro"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="javax.faces.bean.ViewScoped"/>
+<fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
+<fullyQualifiedTypeName name="javax.faces.bean.ManagedProperty"/>
+<fullyQualifiedTypeName name="br.edu.ifba.bsi.se.smartpark.Informacao"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.xpath.internal.operations.String"/>
+<fullyQualifiedTypeName name="javax.annotation.PostConstruct"/>
+<fullyQualifiedTypeName name="org.primefaces.model.chart.MeterGaugeChartModel"/>
+<fullyQualifiedTypeName name="org.primefaces.component.outputlabel.OutputLabel"/>
+<fullyQualifiedTypeName name="br.edu.ifba.bsi.se.smartpark.conector.SingleConector"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="br.edu.ifba.bsi.se.smartpark.MonitorEstacionamento"/>
+<fullyQualifiedTypeName name="br.edu.ifba.bsi.se.smartpark.bd.Usuario"/>
+<fullyQualifiedTypeName name="br.edu.ifba.bsi.se.smartpark.bd.UsuarioDAO"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="javax.sound.midi.MidiDevice.Info"/>
+</qualifiedTypeNameHistroy>

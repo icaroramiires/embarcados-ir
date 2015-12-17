@@ -1,0 +1,53 @@
+package br.edu.ifba.bsi.se.smartpark.bd;
+
+public class Usuario {
+	private int id;
+	private String nome;
+	private String carro;
+	private String placa;
+	private String idade;
+	private String pne;
+	
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getCarro() {
+		return carro;
+	}
+	public void setCarro(String carro) {
+		this.carro = carro;
+	}
+	public String getPlaca() {
+		return placa;
+	}
+	public void setPlaca(String placa) {
+		this.placa = placa;
+	}
+	public String getIdade() {
+		return idade;
+	}
+	public void setIdade(String idade) {
+		this.idade = idade;
+	}
+	public String getPne() {
+		return pne;
+	}
+	public void setPne(String pne) {
+		this.pne = pne;
+	}
+	
+	
+	
+
+}

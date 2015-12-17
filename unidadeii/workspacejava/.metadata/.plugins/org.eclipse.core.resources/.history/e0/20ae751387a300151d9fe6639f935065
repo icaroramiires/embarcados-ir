@@ -1,0 +1,10 @@
+package br.edu.ifba.bsi.se.smartpark.bd;
+
+public class Usuario {
+	private int id;
+	private String nome;
+	private String carro;
+	private String placa;
+	
+
+}

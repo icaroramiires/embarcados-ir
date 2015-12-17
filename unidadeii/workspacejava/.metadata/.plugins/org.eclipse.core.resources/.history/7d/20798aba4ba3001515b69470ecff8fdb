@@ -1,0 +1,40 @@
+package br.edu.ifba.bsi.se.smartpark;
+
+import java.io.Serializable;
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.ViewScoped;
+
+@ManagedBean
+@ViewScoped
+public class VagaView implements Serializable{
+	private List<Informacao> vagas;
+	private Informacao vagaSelecionada;
+	
+	@ManagedProperty("br.edu.ifba.bsi.se.smartpark.Informacao@12345")
+	private Informacao vaga;
+	
+	@PostConstruct
+	public void init() {
+		vagas = vaga.criarVaga(3);
+	}
+	
+	public List<Informacao> getCars() {
+		return vagas;
+	}
+	
+	public void setInformacaoVaga(Informacao vaga){
+		this.vaga = vaga;
+	}
+	
+	public Informacao getVagaSelecionada(){
+		return vagaSelecionada;
+	}
+	
+	public void setVagaSelecionada(Informacao vagaSelecionada) {
+		this.vagaSelecionada = vagaSelecionada;
+	}
+}

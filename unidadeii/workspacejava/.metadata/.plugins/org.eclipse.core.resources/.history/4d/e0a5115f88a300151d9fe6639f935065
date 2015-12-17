@@ -1,0 +1,12 @@
+package br.edu.ifba.bsi.se.smartpark.bd;
+
+import java.util.Map;
+import java.util.TreeMap;
+
+public class UsuarioDAO {
+
+	private static Map<Integer, Usuario> usuarios = 
+			new TreeMap<Integer, Usuario>();
+	
+
+}
