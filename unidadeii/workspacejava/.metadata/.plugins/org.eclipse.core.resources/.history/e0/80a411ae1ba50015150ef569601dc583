@@ -6,7 +6,7 @@ import br.edu.ifba.bsi.se.smartpark.bd.Usuario;
 import br.edu.ifba.bsi.se.smartpark.bd.UsuarioDAO;
 import br.edu.ifba.bsi.se.smartpark.conector.SingleConector;
 
-@ManagedBean(name = "dados")
+@ManagedBean(name = "monitor")
 public class MonitorEstacionamento {
 	int id;
 	int rfid;

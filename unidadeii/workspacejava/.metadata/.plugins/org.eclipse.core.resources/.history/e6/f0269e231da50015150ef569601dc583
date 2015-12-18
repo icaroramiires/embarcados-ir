@@ -138,7 +138,7 @@
 								name="#{dados.pne}" />
 
 							<p:poll interval="1" listener="#{dados.lerSensores}"
-								update="formdados:foto, formdados:Id, formdados:Rfid, formdados:StatusVaga, formdados:Distancia,
+								update="formdados:Id, formdados:Rfid, formdados:StatusVaga, formdados:Distancia,
 								formdados:placaUsuario, formdados:Nome, formdados:Carro, 
 								 formdados:Idade, formdados:Pne">
 							</p:poll>
