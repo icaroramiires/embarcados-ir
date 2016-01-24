@@ -106,7 +106,8 @@ void enviarParaUSB(long info) {
   
 }
 
-int extrairDistancia(long info) {
+int extrairDistancia(long info) {ls
+  //
   int distancia = (info & 255);
   return distancia;
 } 
