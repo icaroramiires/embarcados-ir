@@ -70,6 +70,8 @@ public class Conector {
 		return status;
 	}
 	
+	
+	
 	public Integer getTag() {
 		Integer tag = 0;
 
