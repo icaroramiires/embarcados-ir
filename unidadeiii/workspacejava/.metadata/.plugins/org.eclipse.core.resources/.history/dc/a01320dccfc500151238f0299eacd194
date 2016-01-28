@@ -20,7 +20,7 @@ public class Executor {
 			System.out.println("status = " + status);
 			
 			Integer tag = conector.getTag();
-			System.out.println("Id tag = " + tag);
+			System.out.println("tag = " + tag);
 		
 			System.out.println("Final de leitura!");
 			System.out.println("...");
