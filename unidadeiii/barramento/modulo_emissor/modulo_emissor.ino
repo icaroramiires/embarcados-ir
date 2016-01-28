@@ -51,6 +51,7 @@ void loop() {
   
   if(info != -1) {
     if(IDValido(info)) {
+     
       enviarParaUSB(info);
     } 
   }
@@ -100,13 +101,15 @@ long receber() {
 }
 
 void enviarParaUSB(long info) {
-  Serial.write(10);
-  //Serial.println("teste");
- 
-  
+  int tam  = sizeof(info);
+  char buff[tam];
+  memcpy(&buff, &info, tam);  
+
+  Serial.write((uint8_t*)&buff, tam);
+  //Serial.println(info);
 }
 
-int extrairDistancia(long info) {ls
+int extrairDistancia(long info) {
   //
   int distancia = (info & 255);
   return distancia;
@@ -145,9 +148,3 @@ int pegarDistancia(){
   distancia = ultrasonico.convert(microsec, Ultrasonic::CM);
   return distancia;
 }
-  
-  
-  
- 
-
-

@@ -1,0 +1,6 @@
+00:26:17 **** Incremental Build of configuration Release for project sensoriamento ****
+make all 
+make: Nothing to be done for 'all'.
+
+00:26:17 Build Finished (took 80ms)
+
